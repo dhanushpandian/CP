@@ -1,11 +1,21 @@
-class Solution:
-    def containsDuplicate(self, nums):
-        seen = set()
-        for i in nums:
-            if i in seen:
-                return True
-            seen.add(i)
-        return False
+from collections import Counter
+
+# ! Sorting
+def isAnagram(a,b):
+    return sorted(a) == sorted(b)
+
+# ! HashMaps
+def isAnagram(a,b):
+    if(len(a) != len(b)):return False
+    mapA,mapB = {},{}
+    for i in range(len(a)):
+        mapA[a[i]] = 1 + mapA.get(a[i],0)
+        mapB[b[i]] = 1 + mapB.get(b[i],0)
+    return mapA == mapB    
+
+# ! Counter
+def isAnagram(a,b):
+    return Counter(a) == Counter(b)
     
 
 class Solution(object):
