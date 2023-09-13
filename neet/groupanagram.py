@@ -11,7 +11,7 @@ class Solution:
         return list(anagram_groups.values())
     
 
-
+from collections import Counter
 
 class Solution:
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
