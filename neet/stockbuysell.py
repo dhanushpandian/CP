@@ -9,3 +9,19 @@ class Solution:
             max_profit = max(max_profit, prices[right] - prices[left])
         
         return max_profit
+
+#leetcode forum solution
+def maxProfit(prices: List[int]) -> int:
+    maxP = 0
+    minP = prices[0]
+    for price in prices[1:]:
+        maxP = max(maxP, price - minP)
+        minP = min(minP, price)
+        
+    return maxP
+
+
+with open('user.out', 'w') as f:
+    for case in map(loads, stdin):
+        f.write(f'{str(maxProfit(case))}\n')
+exit()
