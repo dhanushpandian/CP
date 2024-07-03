@@ -48,7 +48,7 @@ class Solution:
             if  x == c :
                 return True
             elif x > c:
-                r-=1
-            else :
+                r-=10
+            else :  
                 l+=1
         return False
