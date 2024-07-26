@@ -28,14 +28,15 @@ class JobProvider(User):
 
     jobproviders={}
 
-    def __init__(self, username=str, password=str,company=str,jobtitle=str,jobdesc=str):
+    def __init__(self, username=str, password=str,company=str,jobtitle=str,jobdesc=str,location=str):
         super().__init__(username, password)
         self.company=company
         self.jobtitle=jobtitle
         self.jobdesc=jobdesc
+        self.location=location
 
     def save(self):
-        a=[self.company,self.jobtitle,self.jobdesc]
+        a=[self.company,self.jobtitle,self.jobdesc,self.location]
         JobProvider.jobproviders[self.username]=a
         print("JobProvider Data Has been added!")
     
