@@ -1,0 +1,65 @@
+Long Proggramminggg ffs
+
+Quiz Maker App
+
+Key Features
+
+1. User Authentication:
+
+Sign up and login functionality
+
+2. Quiz Creation:
+
+Profile management.
+
+Create quizzes with various question types (multiple choice, true/false, short answer).
+
+Display questions one at a time or all at once.
+
+3. Question
+
+Bank:
+
+Store and categorize questions for reuse.
+
+4. Quiz Management:
+
+Edit or delete quizzes.
+
+Duplicate quizzes for easy modification.
+
+5. Quiz Participation:
+
+Allow users to take quizzes.
+
+6. Scoring and Feedback:
+
+Automatic scoring for objective questions.
+
+Provide immediate feedback or upon quiz completion.
+
+Detailed result analysis with correct answers and explanations.
+
+SQL Use Case:
+
+Question:
+
+Write an SQL query to find the names of students who have attempted more than 5 quizzes. The result should include the student names and the number of quizzes they have attempted.
+
+Tables:
+
+students: Contains information about students.
+
+student id (INT, Primary Key)
+
+name (VARCHAR)
+
+quiz attempts: Contains information about quiz attempts.
+
+attempt id (INT, Primary Key)
+
+student id (INT, Foreign Key referencing students.student_id]
+
+score (DECIMAL)
+
+attempt date (DATE)
