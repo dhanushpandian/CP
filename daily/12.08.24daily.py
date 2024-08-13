@@ -1,4 +1,5 @@
 #naive approach
+
 class KthLargest:
     def __init__(self, k: int, x: List[int]):
        self.k=k
@@ -16,6 +17,7 @@ class KthLargest:
 # param_1 = obj.add(val)
 
 #heap approach
+import heapq
 class KthLargest:
 
     def __init__(self, k: int, nums: List[int]):
