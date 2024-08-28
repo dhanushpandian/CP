@@ -57,3 +57,14 @@ class Solution:
         
         recursion(root)
         return ans
+
+    def preorder(self, root: 'Node') -> List[int]:
+        ans=[]
+        def dfs(root):
+            if not root:
+                return 
+            ans.append(root.val)
+            for i in root.children:
+                dfs(i)
+            return ans
+        return dfs(root)
