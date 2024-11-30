@@ -1,21 +1,16 @@
-Senior Software Engineer Interview
-15 May 2024
-
-I applied online. The process took 1 week.I interviewed at HappyFox in 15/5/2024
+I applied online. The process took 1 week.I interviewed at HappyFox (Chennai) in 12/9/2023
 
 Interview
 
-Three rounds - 
+The interview consisted of four rounds. 
+The first round was a telephonic interview with HR. 
+After passing this round, I was invited to their office for the second round, which was a written aptitude test. 
+This test covered technical aptitude questions, quantitative reasoning, and verbal questions. 
+The third round was a technical interview, and the final round was an interview with the CEO.
 
-1. A project assignment to create a rule engine for Gmail in python. Was given a week for this. 
-
-2. CTO Round - Walkthrough of implementation with CTO and discussing the approach with possible improvements. 
-Then an in depth discussion on how to scale it in a production environment. 
-The CTO drilled down to very elementary level to check your knowledge of concepts like asynchronous programming, distributed systems, message queues. 
-
-3. Quick discussion with the CEO about cultural fit After this the offer was rolled out on a call with HR
+Interview questions [1]
 
 Question 1
 
-Design a rule engine for gmail which uses gmail API only to read emails and filter based on few criteria. 
-Then apply move actions on the filtered emails.
+Tell me about yourself. Tell about your previous internship experience. 
+Some questions from the projects that I explained.
