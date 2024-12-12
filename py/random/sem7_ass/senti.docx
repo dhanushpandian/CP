@@ -1,0 +1,28 @@
+from textblob import TextBlob
+
+#SENTIMENTAL ANALYSIS WITH DIAGRAM,CHAR for Sentiment Monitoring Instant Decision
+import matplotlib.pyplot as plt
+
+def analyze_sentiment(text):
+    blob = TextBlob(text)
+    sentiment = blob.sentiment.polarity
+    return sentiment
+
+def plot_sentiment(sentiments):
+    plt.hist(sentiments, bins=20, color='blue', edgecolor='black')
+    plt.title('Sentiment Analysis')
+    plt.xlabel('Sentiment Score')
+    plt.ylabel('Frequency')
+    plt.show()
+
+if __name__ == "__main__":
+    texts = [
+        "I love this product!",
+        "This is the worst experience I've ever had.",
+        "It's okay, not great but not terrible.",
+        "Absolutely fantastic service!",
+        "I wouldn't recommend this to anyone."
+    ]
+
+    sentiments = [analyze_sentiment(text) for text in texts]
+    plot_sentiment(sentiments)

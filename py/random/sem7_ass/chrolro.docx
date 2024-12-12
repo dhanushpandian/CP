@@ -1,0 +1,24 @@
+import matplotlib.pyplot as plt
+import pandas as pd
+import geopandas as gpd
+
+# Load data from CSV file
+data = pd.read_csv('py/random/data.csv')
+print(data.head())
+
+# Load world shapefile
+world = gpd.read_file("d:\downloads/ne_110m_admin_0_countries/ne_110m_admin_0_countries.shp")
+print(world.head())  # Check the columns to ensure we have the right ones
+
+# Merge the data with the GeoDataFrame using the correct column
+world = world.merge(data, how="left", left_on="ADMIN", right_on="Country")
+
+# Plotting the choropleth map
+fig, ax = plt.subplots(1, 1, figsize=(15, 10))
+world.boundary.plot(ax=ax)
+world.plot(column='Value', ax=ax, legend=True,
+           legend_kwds={'label': "Your Legend Label",
+                        'orientation': "horizontal"})
+
+plt.title('Choropleth Map')
+plt.show()
