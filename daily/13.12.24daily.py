@@ -1,6 +1,6 @@
 import heapq
 class Solution:
-    def findScore(self, nums: List[int]) -> int:
+    def findScore(self, nums) -> int:
         a=[[nums[i],i] for i in range(len(nums))]
         heapq.heapify(a)
         seen=set()
