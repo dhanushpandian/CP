@@ -7,12 +7,12 @@ int main(){
     cin>> l;
     int a[l];
     for(int i=0;i<l;i++){
-        cin>>a[i]
+        cin<<a[i]
     }
     cout<<"enetr k:";
     for(int i=0;i<l;i++){
         if(a[i]==k){
-            cout>>i;
+            cout<<i;
             break;
         }
     }
