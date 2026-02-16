@@ -15,3 +15,20 @@ class Solution:
         print(s)
         x=int(s,2)
         return x
+
+
+
+# class Solution:
+#     def reverseBits(self, n: int) -> int:
+#         s=str(bin(n))
+#         s=s[2:]
+#         s='0'*(32-len(s))+s+'b0'
+#         x=int(s[::-1],2)
+#         return x
+class Solution:
+    def reverseBits(self, n: int) -> int:
+        res = 0
+        for i in range(32):
+            res = (res << 1) | (n & 1)
+            n >>= 1
+        return res
