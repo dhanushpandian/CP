@@ -5,3 +5,9 @@ class Solution:
         for i in range(1,len(s)):
             if s[i-1]==s[i]: return False
         return True
+
+x=5
+print(x>>1)
+print(x>>2)
+print(x>>3)
+print(x<<1)
