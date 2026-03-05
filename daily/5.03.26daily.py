@@ -1,6 +1,28 @@
 class Solution:
     def minOperations(self, s: str) -> int:
         a=""
+        b=""
+        d={'1':'0','0':'1'}
+        if s[0]=='1':
+            for i in range(len(s)):
+                x= '1' if i%2==0 else '0'
+                a+=x
+                b+=d[x]
+        else:
+            for i in range(len(s)):
+                x= '0' if i%2==0 else '1'
+                a+=x
+                b+=d[x]
+        c1,c2=0,0
+        for i in range(len(s)):
+            c1+=1 if s[i]!=a[i] else 0
+            c2+=1 if s[i]!=b[i] else 0         
+        return min(c1,c2)
+    
+  #old  
+class Solution:
+    def minOperations(self, s: str) -> int:
+        a=""
         if s[0]=='1':
             for i in range(len(s)):
                 if i%2==0:
@@ -30,3 +52,4 @@ class Solution:
             if s[i]!=b[i]:
                 c2+=1
         return min(c1,c2)
+
