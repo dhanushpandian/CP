@@ -7,3 +7,16 @@ class Solution:
                 m=i
                 break
         return nums[m]
+    
+#biserachj
+class Solution:
+    def findMin(self, nums: List[int]) -> int:
+        r=len(nums)-1
+        l=0
+        while r>l:
+            m=(l+r)//2
+            if m<len(nums) and r<len(nums) and nums[m] > nums[r]:
+                l=m+1
+            else:
+                r=m
+        return nums[l]
